@@ -15,13 +15,13 @@ class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error("Error occurred", error, errorInfo);
+    console.error("Error From Error Boundary : ", error, errorInfo);
   }
   
   render() {
     if(this.state.hasError) {
         return (
-            <ErrorUI/>
+          <ErrorUI/>
         )
     }
     return this.props.children
